@@ -91,11 +91,10 @@
 -   If a file has a single function/class, use default to export that function.
 
 -   Use the same name for a function/class while doing both importing and exporting it to avoid confusion.
-
-    E.g., export default class componentname extends
-    
-        React.Component<> {render () {return()}} correct
-
+    ```js
+       export default class componentname extends
+        React.Component<> {render () {return()}} //correct
+    ```
 -   Don’t use an IIFE function
     ```javascript
     // good
@@ -108,7 +107,7 @@
 -   Use spread operator instead Object.assign
     ```js
     e.g., // good
-    options=(...optionsDefault, ..options)
+    options=(...optionsDefault, ...options)
 
     // bad
     options =Object.assign({},optionsDefault, options)
@@ -144,13 +143,13 @@
 -   No hardcoded font-family and font-size, Should use a variable from a shared variables file.
     ```
     // good
-    font-size: ${SC\_REGULAR\_SIZE\_2}
+    font-size: ${SC_REGULAR_SIZE_2}
 
     // bad
      font-size: 1.75em
 
     // good
-    font-family: ${SC\_LIGHT}
+    font-family: ${SC_LIGHT}
 
     // bad
     font-family: sc-sansLight
@@ -158,7 +157,7 @@
 -   Color codes should not be hardcoded but should be configurable from a common file.
     ```
     // good
-    color : ${RED\_SCALE\_COLOR\_1}
+    color : ${RED_SCALE_COLOR_1}
 
     // bad
     color : red
