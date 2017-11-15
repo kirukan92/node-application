@@ -106,17 +106,17 @@
     ```
 -   Use spread operator instead Object.assign
     ```js
-    e.g., // good
+    // good
     options=(...optionsDefault, ...options)
 
     // bad
     options =Object.assign({},optionsDefault, options)
     ```
--   Do not mention un-necessary functions in the render function.
+-   Do not create side effect in the render function.
 
 -   Keep standard name for the class and function, which represent their behaviour.
     ```
-    e.g., // good
+    // good
     handelClose, OverlayModal
 
     // bad
@@ -164,7 +164,7 @@
     ```
 -   Shouldn’t use any className attribute for the styled component.
     ```xml
-    e.g., // good
+    // good
     <Div>Hello</Div>
     
     // bad
@@ -194,7 +194,7 @@
     ```
 -   No inline styling
     ```js
-    e.g., // good
+    // good
     const TextArea = TextWrapper.extend`
                 margin: 10px 30px 10px 20px;
                 ${props => props.ReadonlyIcon && 'cursor: not-allowed'};`
@@ -229,7 +229,7 @@
 
 -   Use arrow functions instead of normal functions wherever you can.
     ```js
-    e.g., // good
+    // good
     const Myfunction=()=>{}
 
     // bad
@@ -250,7 +250,7 @@
     ```
 -   While using <src> tags, use the alt variable which describes what the image is for better a11y (accessibility requirements).
     ```
-    e.g., // good
+    // good
     alt="image not available"
     
     // bad
@@ -296,14 +296,10 @@
 
 -   The name of test file should the same as the file we are testing followed by .test. 
     ```
-    e.g.: test for page.js will be page.test.js
+    test for page.js will be page.test.js
     ```
--   Package.lock.json should not have dependencies resolved from both artifactory & public npmjs registry. Recreate the file with artifactory as the source registry
-        Solution: The Package.lock.json have two different dependencies from which npm can refer to, to take any files or libraries
-
--   registery which is public and
-
--   artifactory which is internal.
+-   Package.lock.json should not have dependencies resolved from both artifactory & public npmjs registry. Recreate the file with artifactory as the source registry.
+        Solution: The Package.lock.json have two different dependencies from which npm can refer to, to take any files or libraries registery which is public and artifactory which is internal.
     ```
     This dependency should be one, not two. Therefore deleted the Package.lock.json and did npm install 
     inside scb network to get the artifactory link only.
@@ -316,7 +312,7 @@
 
 -   Empty props should be declared in all components for future use.
     ```ts
-    e.g., // good
+    // good
     type Props = {}
     ```
 -   If any component has any activity on click of outside of the component container then there should be a test case related to document.addEventListener and document.removeEventListener
@@ -338,7 +334,7 @@
     ```
 -   If the statement is long, then break it into smaller making it more readable.
     ```js
-    e.g., // good
+    // good
     const titleText = `Don't have a unique Email ID? Straight2Bank supports login via your registered email. If you do not have a registered email or if your email address is not unique, you may login
     with your Straight2Bank User ID.`  
            <Tooltip title={ titleText }></Tooltip>
@@ -350,7 +346,7 @@
 
 -   Make sure you have not left any preceding space.
     ```
-    e.g., // good
+    // good
     it(‘on click load component’)
 
     // bad
@@ -368,9 +364,7 @@
 
 -   Unit Test case for render is for particular HTML element not for styled component rendered.
 
--   Don’t use the on-click event un-necessary for react routing, Use react router Link
-
--   Don’t pass un-necessary data to the component if it’s not useful in Unit testing.
+-   Don’t use the on-click event un-necessary for react routing, Use react router Link.
 
 -   Add a key attribute while iterating using “map” to avoid warning in the browser console.
 
@@ -379,6 +373,3 @@
 -   In test Cases beforeEach, afterEach options are available. To initialize some values use beforeEach and to restore or delete some variables use afterEach.
 
 -   Make sure that the test describes accurately what you're testing.
-
--   Make sure that you're providing least amount of information in the test.
-
