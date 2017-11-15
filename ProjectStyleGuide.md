@@ -138,7 +138,9 @@
 
 -   Use shared flow type if it is required.
 
-## StyledComponents: https://www.styled-components.com/
+## Styled Components
+    
+-   Check out Styled Components official website [here](https://www.styled-components.com/)
 
 -   No hardcoded font-family and font-size, Should use a variable from a shared variables file.
     ```
