@@ -51,8 +51,10 @@
 
 -   Use === and !== as much as possible.
 
--   Use curly braces for if statements. if(isAwesome){ return 1; }
-
+-   Use curly braces for if statements. 
+    ```    
+    if(isAwesome){ return 1; }
+    ```
 -   Use logical OR, logical AND it will remove unnecessary if-else statement.
 
 -   Inline If statements are not advised. Should be wrapped in {}
